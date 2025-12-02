@@ -1,9 +1,6 @@
 package com.system.design.moviebooking.model;
 
-import jakarta.persistence.ElementCollection;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,6 +14,7 @@ public class Screen  extends BaseModel {
     @ElementCollection
     private List<Features> screenFeatures;
     @OneToMany
+     @JoinColumn(name="screen_id")
     private List<Seat> seats;
 
 }
