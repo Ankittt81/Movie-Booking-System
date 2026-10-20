@@ -1,20 +1,24 @@
-package com.system.design.moviebooking.model;
+package com.system.design.moviebooking.model.mainEntity;
 
 
-import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.ManyToMany;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
+import java.time.LocalDate;
 
 @Getter
 @Setter
 @Entity
 public class Movie extends BaseModel {
-    private String title;
+//    private String title;
+//    private String description;
+//    private Integer duration;
+//    private String language;
+//    private String genre;
+//    private LocalDate releaseDate;
+//    private String poster;
+    /*
     private String director;
     private String year;
     private String genre;
@@ -26,5 +30,7 @@ public class Movie extends BaseModel {
     @Enumerated
     @ElementCollection
     private  List<Language>  languages;
+
+     */
 
 }

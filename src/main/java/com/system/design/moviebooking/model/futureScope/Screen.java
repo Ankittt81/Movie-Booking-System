@@ -1,5 +1,7 @@
-package com.system.design.moviebooking.model;
+package com.system.design.moviebooking.model.futureScope;
 
+import com.system.design.moviebooking.model.enums.Features;
+import com.system.design.moviebooking.model.mainEntity.BaseModel;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

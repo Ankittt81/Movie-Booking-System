@@ -1,5 +1,7 @@
-package com.system.design.moviebooking.model;
+package com.system.design.moviebooking.model.futureScope;
 
+import com.system.design.moviebooking.model.mainEntity.BaseModel;
+import com.system.design.moviebooking.model.mainEntity.Show;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import lombok.Getter;
@@ -8,7 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class ShowSeatType  extends BaseModel{
+public class ShowSeatType  extends BaseModel {
     @ManyToOne
     private Show show;
     @ManyToOne

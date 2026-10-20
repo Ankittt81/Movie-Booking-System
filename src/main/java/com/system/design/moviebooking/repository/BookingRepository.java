@@ -1,7 +1,6 @@
 package com.system.design.moviebooking.repository;
 
-import com.system.design.moviebooking.model.Booking;
-import jdk.jfr.Registered;
+import com.system.design.moviebooking.model.mainEntity.Booking;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

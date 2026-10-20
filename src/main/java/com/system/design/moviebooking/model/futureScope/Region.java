@@ -1,11 +1,11 @@
-package com.system.design.moviebooking.model;
+package com.system.design.moviebooking.model.futureScope;
 
 
+import com.system.design.moviebooking.model.mainEntity.BaseModel;
 import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
 @Getter
 @Setter
 @Entity

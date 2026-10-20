@@ -1,4 +1,4 @@
-package com.system.design.moviebooking.model;
+package com.system.design.moviebooking.model.enums;
 
 public enum PaymentStatus {
     PENDING,
