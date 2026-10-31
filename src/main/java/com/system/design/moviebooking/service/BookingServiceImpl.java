@@ -2,7 +2,7 @@
 //
 //import com.system.design.moviebooking.model.enums.BookingStatus;
 //import com.system.design.moviebooking.model.enums.ShowSeatStatus;
-//import com.system.design.moviebooking.model.futureScope.ShowSeat;
+//import com.system.design.moviebooking.model.mainEntity.ShowSeat;
 //import com.system.design.moviebooking.model.mainEntity.Booking;
 //import com.system.design.moviebooking.model.mainEntity.Show;
 //import com.system.design.moviebooking.model.mainEntity.User;
