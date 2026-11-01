@@ -1,6 +1,5 @@
-package com.system.design.moviebooking.dto;
+package com.system.design.moviebooking.dto.movieAndTheatre;
 
-import jakarta.persistence.Column;
 import lombok.Getter;
 import lombok.Setter;
 

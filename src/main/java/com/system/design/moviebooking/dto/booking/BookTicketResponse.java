@@ -1,6 +1,7 @@
-package com.system.design.moviebooking.dto;
+package com.system.design.moviebooking.dto.booking;
 
 
+import com.system.design.moviebooking.model.enums.ResponseStatus;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,4 +1,4 @@
-package com.system.design.moviebooking.dto;
+package com.system.design.moviebooking.dto.seatAndShow;
 
 import jakarta.validation.constraints.*;
 import lombok.Getter;

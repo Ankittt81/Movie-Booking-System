@@ -1,4 +1,4 @@
-package com.system.design.moviebooking.dto;
+package com.system.design.moviebooking.dto.movieAndTheatre;
 
 import lombok.Getter;
 import lombok.Setter;

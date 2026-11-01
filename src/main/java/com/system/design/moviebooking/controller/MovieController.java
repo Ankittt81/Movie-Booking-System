@@ -1,13 +1,10 @@
 package com.system.design.moviebooking.controller;
 
 import com.system.design.moviebooking.dto.ApiResponse;
-import com.system.design.moviebooking.dto.MovieRequestDto;
-import com.system.design.moviebooking.dto.MovieResponseDto;
-import com.system.design.moviebooking.model.mainEntity.Movie;
+import com.system.design.moviebooking.dto.movieAndTheatre.MovieRequestDto;
+import com.system.design.moviebooking.dto.movieAndTheatre.MovieResponseDto;
 import com.system.design.moviebooking.service.IMovieService;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

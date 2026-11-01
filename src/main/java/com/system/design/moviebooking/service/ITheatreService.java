@@ -1,7 +1,7 @@
 package com.system.design.moviebooking.service;
 
-import com.system.design.moviebooking.dto.TheatreRequestDto;
-import com.system.design.moviebooking.dto.TheatreResponseDto;
+import com.system.design.moviebooking.dto.movieAndTheatre.TheatreRequestDto;
+import com.system.design.moviebooking.dto.movieAndTheatre.TheatreResponseDto;
 import com.system.design.moviebooking.model.enums.TheatreStatus;
 import org.springframework.data.domain.Pageable;
 

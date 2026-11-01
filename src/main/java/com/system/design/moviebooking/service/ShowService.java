@@ -1,6 +1,7 @@
 package com.system.design.moviebooking.service;
 
-import com.system.design.moviebooking.dto.*;
+import com.system.design.moviebooking.dto.movieAndTheatre.TheatreShowsDto;
+import com.system.design.moviebooking.dto.seatAndShow.*;
 import com.system.design.moviebooking.exceptions.AccessDeniedException;
 import com.system.design.moviebooking.exceptions.BusinessException;
 import com.system.design.moviebooking.exceptions.ResourceNotFound;

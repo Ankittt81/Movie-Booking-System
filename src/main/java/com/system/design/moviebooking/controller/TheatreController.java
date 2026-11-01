@@ -1,9 +1,9 @@
 package com.system.design.moviebooking.controller;
 
 import com.system.design.moviebooking.dto.ApiResponse;
-import com.system.design.moviebooking.dto.TheatreRequestDto;
-import com.system.design.moviebooking.dto.TheatreResponseDto;
-import com.system.design.moviebooking.dto.TheatreStatusRequestDto;
+import com.system.design.moviebooking.dto.movieAndTheatre.TheatreRequestDto;
+import com.system.design.moviebooking.dto.movieAndTheatre.TheatreResponseDto;
+import com.system.design.moviebooking.dto.movieAndTheatre.TheatreStatusRequestDto;
 import com.system.design.moviebooking.model.enums.TheatreStatus;
 import com.system.design.moviebooking.security.AuthUser;
 import com.system.design.moviebooking.service.ITheatreService;

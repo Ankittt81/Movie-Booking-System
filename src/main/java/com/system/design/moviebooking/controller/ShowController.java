@@ -1,10 +1,10 @@
 package com.system.design.moviebooking.controller;
 
 import com.system.design.moviebooking.dto.ApiResponse;
-import com.system.design.moviebooking.dto.SeatMapDto;
-import com.system.design.moviebooking.dto.ShowRequestDto;
-import com.system.design.moviebooking.dto.ShowResponseDto;
-import com.system.design.moviebooking.dto.TheatreShowsDto;
+import com.system.design.moviebooking.dto.seatAndShow.SeatMapDto;
+import com.system.design.moviebooking.dto.seatAndShow.ShowRequestDto;
+import com.system.design.moviebooking.dto.seatAndShow.ShowResponseDto;
+import com.system.design.moviebooking.dto.movieAndTheatre.TheatreShowsDto;
 import com.system.design.moviebooking.security.AuthUser;
 import com.system.design.moviebooking.service.IShowService;
 import jakarta.validation.Valid;

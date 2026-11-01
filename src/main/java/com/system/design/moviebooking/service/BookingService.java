@@ -1,7 +1,7 @@
 package com.system.design.moviebooking.service;
 
-import com.system.design.moviebooking.dto.BookingResponseDto;
-import com.system.design.moviebooking.dto.HoldSeatsRequestDto;
+import com.system.design.moviebooking.dto.booking.BookingResponseDto;
+import com.system.design.moviebooking.dto.booking.HoldSeatsRequestDto;
 import com.system.design.moviebooking.dto.PaymentResult;
 import com.system.design.moviebooking.exceptions.AccessDeniedException;
 import com.system.design.moviebooking.exceptions.BusinessException;

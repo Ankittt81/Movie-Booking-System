@@ -1,9 +1,7 @@
-package com.system.design.moviebooking.dto;
+package com.system.design.moviebooking.dto.movieAndTheatre;
 
-import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Pattern;
 import lombok.Getter;
 import lombok.Setter;
 
