@@ -4,10 +4,7 @@ package com.system.design.moviebooking.model.mainEntity;
 import com.system.design.moviebooking.model.enums.SeatStatus;
 import com.system.design.moviebooking.model.enums.ShowSeatStatus;
 import com.system.design.moviebooking.model.futureScope.Seat;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
-import jakarta.persistence.UniqueConstraint;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,12 +15,14 @@ import java.time.LocalDateTime;
 @Entity
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = {"show_id", "seat_label"}))
 public class ShowSeat extends BaseModel {
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Show show;
     private String seatLabel;
+    @Enumerated(EnumType.STRING)
     private SeatStatus status;
     private LocalDateTime heldUntil;
-    private Long heldByUserId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Booking booking;
 //    @ManyToOne
 //    private Seat seat;
 //    private ShowSeatStatus status;

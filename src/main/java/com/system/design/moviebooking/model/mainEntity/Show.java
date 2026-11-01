@@ -9,7 +9,8 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
-@Entity(name="shows")
+@Entity()
+@Table(name = "shows")
 public class Show extends BaseModel {
     @ManyToOne
     private Movie movie;
