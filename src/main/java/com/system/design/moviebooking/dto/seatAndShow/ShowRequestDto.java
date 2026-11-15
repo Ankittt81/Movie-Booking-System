@@ -10,7 +10,9 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class ShowRequestDto {
+    @NotNull
     private Long movieId;
+    @NotNull
     private Long theatreId;
     @NotNull
     @Future

@@ -20,7 +20,7 @@ public interface ShowRepository extends JpaRepository<Show, Long> {
             join fetch s.movie m
             where m.id = :movieId
               and s.startTime >= :from and s.startTime < :to
-              and t.status = com.system.design.moviebooking.model.enums.TheatreStatus.APPROVED
+              and t.status = com.system.design.moviebooking.model.enums.TheatreStatus.ACTIVE
             order by t.name, s.startTime
             """)
     List<Show> findShowsForMovie(@Param("movieId") Long movieId,

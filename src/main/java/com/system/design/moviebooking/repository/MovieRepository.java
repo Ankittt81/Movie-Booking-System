@@ -6,9 +6,11 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface MovieRepository extends JpaRepository<Movie, Long> {
 
     Page<Movie> findByActiveTrueAndTitleContainingIgnoreCase(String title, Pageable pageable);
-    Movie findByIdAndActiveTrue(Long id);
+    Optional<Movie> findByIdAndActiveTrue(Long id);
 }

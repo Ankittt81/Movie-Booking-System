@@ -47,10 +47,8 @@ public class ShowService implements IShowService {
             throw new BusinessException("Theatre is not approved yet");
         }
 
-        Movie movie = movieRepository.findByIdAndActiveTrue(request.getMovieId());
-        if (movie == null) {
-            throw new ResourceNotFound("Movie not found");
-        }
+        Movie movie = movieRepository.findByIdAndActiveTrue(request.getMovieId())
+                .orElseThrow(() -> new ResourceNotFound("Movie not found"));
 
         Show show = new Show();
         show.setMovie(movie);

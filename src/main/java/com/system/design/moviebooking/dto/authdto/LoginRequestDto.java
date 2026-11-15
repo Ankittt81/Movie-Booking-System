@@ -1,14 +1,16 @@
 package com.system.design.moviebooking.dto.authdto;
 
 import jakarta.validation.constraints.Email;
-import lombok.Data;
-import lombok.NonNull;
+import jakarta.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class LoginRequestDto {
-    @NonNull
+    @NotBlank
     @Email
     private String email;
-    @NonNull
+    @NotBlank
     private String password;
 }
