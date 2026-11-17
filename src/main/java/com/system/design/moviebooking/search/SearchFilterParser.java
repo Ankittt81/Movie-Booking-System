@@ -21,6 +21,7 @@ public class SearchFilterParser {
     private static final int MAX_DAYS_AHEAD = 14;
     private static final int MAX_TITLE_LENGTH = 100;
     private static final int MAX_CITY_LENGTH = 60;
+    private static final int MAX_DURATION_LENGTH = 600;
 
     private final ObjectMapper objectMapper;
 
@@ -41,7 +42,8 @@ public class SearchFilterParser {
                 cleanText(raw.getCity(), MAX_CITY_LENGTH),
                 cleanPrice(raw.getMaxPrice()),
                 resolveDay(raw.getDay(), today),
-                parseTimeOfDay(raw.getTimeOfDay()));
+                parseTimeOfDay(raw.getTimeOfDay()),
+                cleanLength(raw.getMaxDuration(), MAX_DURATION_LENGTH));
     }
 
     // ---------- 1. get the JSON out of the text ----------
@@ -88,6 +90,16 @@ public class SearchFilterParser {
             }
         }
         return null;
+    }
+    private Integer cleanLength(String value,int maxLength){
+        if(value==null) return null;
+        String trimmed = value.trim();
+        if(trimmed.isEmpty() || trimmed.equalsIgnoreCase("null")) {
+            return null;
+        }
+        Integer duration=Integer.valueOf(trimmed);
+        if(duration>maxLength) return null;
+        return duration;
     }
 
     private BigDecimal cleanPrice(Double price) {
@@ -145,6 +157,6 @@ public class SearchFilterParser {
     }
 
     private SearchFilters empty() {
-        return new SearchFilters(null, null, null, null, null, null, null);
+        return new SearchFilters(null, null, null, null, null, null, null,null);
     }
 }

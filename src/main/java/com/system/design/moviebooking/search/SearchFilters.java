@@ -19,6 +19,7 @@ public class SearchFilters {
     private BigDecimal maxPrice;
     private LocalDate date;
     private TimeOfDay TimeOfDay;
+    private Integer maxDuration;
 
     @JsonIgnore
     public boolean isEmpty(){
@@ -29,6 +30,7 @@ public class SearchFilters {
         if(maxPrice!=null) return false;
         if(date!=null) return false;
         if(TimeOfDay!=null) return false;
+        if(maxDuration!=null) return false;
         return true;
     }
 }

@@ -17,4 +17,5 @@ public class RawFilters {
     private Double maxPrice;
     private String day;
     private String timeOfDay;
+    private String maxDuration;
 }

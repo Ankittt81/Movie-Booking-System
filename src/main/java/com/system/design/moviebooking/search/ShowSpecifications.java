@@ -49,6 +49,9 @@ public final class ShowSpecifications {
                 p.add(cb.greaterThanOrEqualTo(root.<LocalDateTime>get("startTime"), f.getDate().atStartOfDay()));
                 p.add(cb.lessThan(root.<LocalDateTime>get("startTime"), f.getDate().plusDays(1).atStartOfDay()));
             }
+            if(f.getMaxDuration()!=null){
+                p.add(cb.lessThanOrEqualTo(movie.get("duration"), f.getMaxDuration()));
+            }
             return cb.and(p.toArray(new Predicate[0]));
         };
     }

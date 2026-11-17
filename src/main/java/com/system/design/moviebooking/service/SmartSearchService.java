@@ -41,7 +41,7 @@ public class SmartSearchService {
 
     // No @Transactional here on purpose: a database connection must not be held during the AI call.
     public SearchResponseDto search(String rawQuery) {
-        String query = rawQuery == null ? "" : rawQuery.trim();
+        String query=(rawQuery==null)?"":rawQuery.trim();
         if (query.isEmpty() || query.length() > MAX_QUERY_LENGTH) {
             throw new BusinessException("Search text must be 1 to " + MAX_QUERY_LENGTH + " characters");
         }
@@ -50,7 +50,7 @@ public class SmartSearchService {
         SearchFilters aiFilters = askAi(query, now);
         boolean aiUsed = !aiFilters.isEmpty();
         // fallback: AI failed or understood nothing, so search the movie title with the raw text
-        SearchFilters filters = aiUsed ? aiFilters : new SearchFilters(query, null, null, null, null, null, null);
+        SearchFilters filters = aiUsed ? aiFilters : new SearchFilters(query, null, null, null, null, null, null,null);
 
         List<SearchResultDto> results = showRepository
                 .findAll(ShowSpecifications.matching(filters, now),
@@ -74,7 +74,7 @@ public class SmartSearchService {
             return parser.parse(response.getText(), now.toLocalDate());
         } catch (AiException e) {
             log.warn("AI search failed, falling back to title search: {}", e.getMessage());
-            return new SearchFilters(null, null, null, null, null, null, null);
+            return new SearchFilters(null, null, null, null, null, null, null,null);
         }
     }
 
