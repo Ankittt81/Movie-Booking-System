@@ -3,6 +3,9 @@ package com.system.design.moviebooking.ai;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Getter
 @AllArgsConstructor
 public class AiResponse {
@@ -12,5 +15,6 @@ public class AiResponse {
     private final Integer completionTokens;
     private final Integer totalTokens;
     private final long latencyMs;
+    private final List<ToolCall> toolCalls;
 
 }

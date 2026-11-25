@@ -52,6 +52,12 @@ public class SmartSearchService {
         // fallback: AI failed or understood nothing, so search the movie title with the raw text
         SearchFilters filters = aiUsed ? aiFilters : new SearchFilters(query, null, null, null, null, null, null,null);
 
+        List<SearchResultDto> results=findShows(filters, now);
+
+        return new SearchResponseDto(filters, aiUsed, results);
+    }
+
+    public List<SearchResultDto> findShows(SearchFilters filters, LocalDateTime now){
         List<SearchResultDto> results = showRepository
                 .findAll(ShowSpecifications.matching(filters, now),
                         PageRequest.of(0, FETCH_LIMIT, Sort.by("startTime")))
@@ -60,8 +66,7 @@ public class SmartSearchService {
                 .limit(RESULT_LIMIT)
                 .map(this::toDto)
                 .toList();
-
-        return new SearchResponseDto(filters, aiUsed, results);
+        return results;
     }
 
     private SearchFilters askAi(String query, LocalDateTime now) {
